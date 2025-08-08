@@ -216,6 +216,8 @@
     </div>
 
     <!-- ========== JAVASCRIPT ========== -->
+    <!-- Preline UI for components like dropdowns and modals -->
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.js"></script>
     <script>
         // --- Registration Modal Logic ---
         const formModal = document.getElementById('form-modal');
@@ -234,16 +236,13 @@
 
         // --- Team Modal Logic ---
         const teamModal = document.getElementById('team-modal');
-        const openTeamBtn = document.getElementById('open-team-modal-btn');
-        const navTeamBtn = document.getElementById('nav-team-btn'); // New nav button for team
+        const navTeamBtn = document.getElementById('nav-team-btn');
         const closeTeamBtn = document.getElementById('close-team-modal-btn');
         const teamOverlay = document.getElementById('team-modal-overlay');
 
         function openTeamModal() { teamModal.classList.remove('hidden'); }
         function closeTeamModal() { teamModal.classList.add('hidden'); }
-
-        // Event listener for the button inside the "About Us" section is no longer needed as there is no button there.
-        // openTeamBtn.addEventListener('click', openTeamModal); 
+ 
         navTeamBtn.addEventListener('click', (e) => { e.preventDefault(); openTeamModal(); });
         closeTeamBtn.addEventListener('click', closeTeamModal);
         teamOverlay.addEventListener('click', closeTeamModal);
