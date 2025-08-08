@@ -164,15 +164,17 @@
     </div>
 
     <!-- ========== TEAM MODAL ========== -->
-    <div id="team-modal" class="hidden fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+    <div id="team-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
         <div id="team-modal-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-75"></div>
-        <div class="relative bg-white rounded-xl shadow-lg w-full max-w-4xl mx-auto">
-            <div class="p-6 sm:p-8">
+        <div class="relative bg-white rounded-xl shadow-lg w-full max-w-4xl mx-auto flex flex-col" style="max-height: 90vh;">
+            <div class="p-6 sm:p-8 flex-shrink-0">
                 <button id="close-team-modal-btn" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
                     <span class="sr-only">Cerrar</span>
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">Conoce a Nuestro Equipo</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center">Conoce a Nuestro Equipo</h2>
+            </div>
+            <div class="p-6 sm:p-8 pt-0 overflow-y-auto">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Presidente -->
                     <div class="text-center">
