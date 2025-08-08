@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Forja - Ministerio de Hombres</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Aplicar la fuente Inter a todo el cuerpo del documento */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Color de acento personalizado basado en el logo */
+        .accent-color {
+            color: #D9531E;
+        }
+        .bg-accent-color {
+            background-color: #D9531E;
+        }
+        .border-accent-color {
+            border-color: #D9531E;
+        }
+        .hover\:bg-accent-dark:hover {
+            background-color: #b84618;
+        }
+        .team-photo {
+            height: 128px;
+            width: 128px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- ========== HEADER ========== -->
+    <header class="sticky top-0 z-40 flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white/80 backdrop-blur-sm text-sm py-4">
+        <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
+            <div class="flex items-center justify-between">
+                <a class="flex-none text-xl font-semibold accent-color" href="#">LA FORJA</a>
+                <div class="sm:hidden">
+                    <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm" data-hs-collapse="#navbar-basic" aria-controls="navbar-basic" aria-label="Toggle navigation">
+                        <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="navbar-basic" class="hidden basis-full grow sm:block">
+                <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
+                    <a class="font-medium text-gray-600 hover:text-gray-900" href="#inicio">Inicio</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-900" href="#proceso">El Proceso</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-900" href="#nosotros">Quiénes Somos</a>
+                    <a class="font-medium text-gray-600 hover:text-gray-900" href="#" id="nav-inscribete-btn">Inscríbete</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="content" role="main">
+        
+        <!-- ========== HERO SECTION ========== -->
+        <div id="inicio" class="bg-black">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+                <img src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/FORJa%20png-8.png" alt="Logo de FORJA" class="h-52 md:h-72 mx-auto mb-8 drop-shadow-[0_5px_15px_rgba(217,83,30,0.4)]">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-white">
+                    Ministerio de Hombres <span class="accent-color">La Forja</span>
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-200 italic">
+                    "En cuanto a la pasada manera de vivir, despojaos del viejo hombre... y renovaos en el espíritu de vuestra mente, y vestíos del nuevo hombre, creado según Dios en la justicia y santidad de la verdad."
+                </p>
+                <p class="mt-2 text-md text-gray-300 font-semibold">Efesios 4:22-24</p>
+            </div>
+        </div>
+
+        <!-- ========== PROCESS SECTION ========== -->
+        <div id="proceso" class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+            <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+                <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-gray-800">El Proceso</h2>
+                <p class="mt-1 text-gray-600">Aquí somos moldeados por el fuego del Espíritu Santo para ser hombres conforme al corazón de Dios.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-6 text-center"><h3 class="text-xl font-semibold text-gray-800">Fragua de Identidad y Propósito</h3></div>
+                <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-6 text-center"><h3 class="text-xl font-semibold text-gray-800">Fragua de la Fe y Esperanza</h3></div>
+                <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-6 text-center"><h3 class="text-xl font-semibold text-gray-800">Fragua del Carácter</h3></div>
+                <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-6 text-center"><h3 class="text-xl font-semibold text-gray-800">Fragua de la Unidad y Familia</h3></div>
+                <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-6 text-center"><h3 class="text-xl font-semibold text-gray-800">Fragua de la Integridad y Hermandad</h3></div>
+                <div class="group flex flex-col h-full bg-white border border-gray-200 shadow-sm rounded-xl p-4 md:p-6 text-center"><h3 class="text-xl font-semibold text-gray-800">Fragua del Servicio y Legado</h3></div>
+            </div>
+        </div>
+
+        <!-- ========== ABOUT US SECTION ========== -->
+        <div id="nosotros" class="bg-white">
+            <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+                <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
+                    <div>
+                        <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-gray-800">¡Forjados para Forjar!</h2>
+                        <p class="mt-3 text-lg text-gray-600">Bienvenido a LA FORJA, un ministerio para hombres que han sido transformados en el fuego. Fuiste encendido por el poder de Dios, y ahora tu misión es mantener vivo ese fuego en ti y en otros.</p>
+                        <p class="mt-3 text-gray-600">Somos hombres comprometidos a fortalecer corazones, formar carácter firme y levantar forjadores para Cristo. Nuestra base es la Palabra: <span class="italic">"El hierro se afila con el hierro, y el hombre en el trato con el hombre."</span> (Proverbios 27:17)</p>
+                        <div class="mt-6">
+                            <a id="open-team-modal-btn" class="cursor-pointer inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800">
+                                Conoce a nuestro equipo
+                                <svg class="w-2.5 h-2.5" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-10 lg:mt-0">
+                        <img class="w-full rounded-xl" src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/IMG_8204.jpg" alt="[Foto del equipo Forjadores]"
+                        onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/ffffff?text=Comunidad+de+Hombres';">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== CTA SECTION ========== -->
+        <div id="llamada-accion" class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 mx-auto">
+            <div class="bg-white rounded-xl shadow-lg p-4 sm:p-7 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold accent-color">Del fuego nacen los FORJADORES.</h2>
+                <p class="mt-4 text-lg text-gray-800">¿Estás preparado para dejarte forjar?</p>
+                <div class="mt-8">
+                    <a id="open-modal-btn" class="cursor-pointer inline-flex justify-center items-center gap-x-3 text-center bg-accent-color hover:bg-accent-dark border border-transparent text-white text-lg font-medium rounded-md focus:outline-none transition py-4 px-8">
+                        ¡Inscríbete en LA FORJA! 🔥👊
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-gray-800 text-white">
+        <div class="max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+            <div class="text-center">
+                <p>&copy; 2024 Ministerio de Hombres La Forja. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== REGISTRATION MODAL ========== -->
+    <div id="form-modal" class="hidden fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+        <div id="modal-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-75"></div>
+        <div class="relative bg-white rounded-xl shadow-lg w-full max-w-lg mx-auto">
+            <div class="p-6 sm:p-8">
+                <button id="close-modal-btn" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                    <span class="sr-only">Cerrar</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">Formulario de Inscripción</h2>
+                <form id="whatsapp-form">
+                    <div class="grid gap-4">
+                        <div><label for="nombre" class="block text-sm font-medium mb-2">Nombre Completo</label><input type="text" name="nombre" id="nombre" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" required></div>
+                        <div><label for="email" class="block text-sm font-medium mb-2">Email</label><input type="email" name="email" id="email" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" required></div>
+                        <div><label for="telefono" class="block text-sm font-medium mb-2">Teléfono / Celular</label><input type="tel" name="telefono" id="telefono" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500" required></div>
+                    </div>
+                    <div class="mt-6 text-center"><button type="submit" class="w-full sm:w-auto inline-flex justify-center items-center gap-x-3 text-center bg-green-500 hover:bg-green-600 border border-transparent text-white text-lg font-medium rounded-md py-3 px-8">Enviar por WhatsApp</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== TEAM MODAL ========== -->
+    <div id="team-modal" class="hidden fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
+        <div id="team-modal-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-75"></div>
+        <div class="relative bg-white rounded-xl shadow-lg w-full max-w-4xl mx-auto">
+            <div class="p-6 sm:p-8">
+                <button id="close-team-modal-btn" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                    <span class="sr-only">Cerrar</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">Conoce a Nuestro Equipo</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Presidente -->
+                    <div class="text-center">
+                        <img class="rounded-full mx-auto team-photo" src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/Imagen%20de%20WhatsApp%202025-08-08%20a%20las%2006.08.58_f2b0e00c.jpg" alt="[Foto de Helio Ricardo Marin Ortiz]" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/ffffff?text=Presidente';">
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Helio Ricardo Marin Ortiz</h3>
+                        <p class="text-sm text-gray-500">Presidente</p>
+                    </div>
+                    <!-- Vicepresidente -->
+                    <div class="text-center">
+                        <img class="rounded-full mx-auto team-photo" src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/IMG_8156.jpg" alt="[Foto de Luis Fernando Maestre]" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/ffffff?text=Vicepresidente';">
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Luis Fernando Maestre</h3>
+                        <p class="text-sm text-gray-500">Vicepresidente</p>
+                    </div>
+                    <!-- Secretario -->
+                    <div class="text-center">
+                        <img class="rounded-full mx-auto team-photo" src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/IMG_8204.jpg" alt="[Foto del equipo]" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/ffffff?text=Secretario';">
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Secretario</h3>
+                        <p class="text-sm text-gray-500">(Nombre por confirmar)</p>
+                    </div>
+                    <!-- Tesorero -->
+                    <div class="text-center">
+                        <img class="rounded-full mx-auto team-photo" src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/IMG_8204.jpg" alt="[Foto del equipo]" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/ffffff?text=Tesorero';">
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Tesorero</h3>
+                        <p class="text-sm text-gray-500">(Nombre por confirmar)</p>
+                    </div>
+                    <!-- Revisor Fiscal -->
+                    <div class="text-center">
+                        <img class="rounded-full mx-auto team-photo" src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/IMG_8204.jpg" alt="[Foto del equipo]" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/ffffff?text=Revisor+Fiscal';">
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Revisor Fiscal</h3>
+                        <p class="text-sm text-gray-500">(Nombre por confirmar)</p>
+                    </div>
+                    <!-- Vocal -->
+                    <div class="text-center">
+                        <img class="rounded-full mx-auto team-photo" src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/IMG_8204.jpg" alt="[Foto del equipo]" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/ffffff?text=Vocal';">
+                        <h3 class="mt-4 text-lg font-semibold text-gray-800">Vocal</h3>
+                        <p class="text-sm text-gray-500">(Nombre por confirmar)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // --- Registration Modal Logic ---
+        const formModal = document.getElementById('form-modal');
+        const openFormBtn = document.getElementById('open-modal-btn');
+        const navInscribeteBtn = document.getElementById('nav-inscribete-btn');
+        const closeFormBtn = document.getElementById('close-modal-btn');
+        const formOverlay = document.getElementById('modal-overlay');
+
+        function openFormModal() { formModal.classList.remove('hidden'); }
+        function closeFormModal() { formModal.classList.add('hidden'); }
+
+        openFormBtn.addEventListener('click', openFormModal);
+        navInscribeteBtn.addEventListener('click', (e) => { e.preventDefault(); openFormModal(); });
+        closeFormBtn.addEventListener('click', closeFormModal);
+        formOverlay.addEventListener('click', closeFormModal);
+
+        // --- Team Modal Logic ---
+        const teamModal = document.getElementById('team-modal');
+        const openTeamBtn = document.getElementById('open-team-modal-btn');
+        const closeTeamBtn = document.getElementById('close-team-modal-btn');
+        const teamOverlay = document.getElementById('team-modal-overlay');
+
+        function openTeamModal() { teamModal.classList.remove('hidden'); }
+        function closeTeamModal() { teamModal.classList.add('hidden'); }
+
+        openTeamBtn.addEventListener('click', openTeamModal);
+        closeTeamBtn.addEventListener('click', closeTeamModal);
+        teamOverlay.addEventListener('click', closeTeamModal);
+
+        // --- WhatsApp Form Logic ---
+        const form = document.getElementById('whatsapp-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const whatsappNumber = '573012971387';
+            const message = `¡Hola! Quiero inscribirme en LA FORJA.\n\nMis datos son:\n*Nombre:* ${nombre}\n*Email:* ${email}\n*Teléfono:* ${telefono}`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, '_blank');
+            closeFormModal();
+        });
+    </script>
+
+</body>
+</html>
