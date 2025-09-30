@@ -57,6 +57,10 @@
         .whatsapp-btn:hover {
             transform: scale(1.1);
         }
+        .highlight-glow {
+            box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -81,6 +85,7 @@
             <div id="navbar-basic" class="hidden basis-full grow sm:block">
                 <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
                     <a class="nav-link font-medium text-gray-600 hover:text-gray-900" href="#inicio">Inicio</a>
+                    <a class="nav-link font-medium text-gray-600 hover:text-gray-900" href="#proximo-evento">Próximo Evento</a>
                     <a class="nav-link font-medium text-gray-600 hover:text-gray-900" href="#proceso">El Proceso</a>
                     <a class="nav-link font-medium text-gray-600 hover:text-gray-900" href="#nosotros">Quiénes Somos</a>
                     <a class="nav-link font-medium text-gray-600 hover:text-gray-900" href="#equipo">Nuestro Equipo</a>
@@ -96,8 +101,8 @@
         
         <!-- ========== HERO SECTION ========== -->
         <div id="inicio" class="bg-black">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-                <img src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/FORJa%20png-8.png" alt="Logo de FORJA" class="h-52 md:h-72 mx-auto mb-8 drop-shadow-[0_5px_15px_rgba(217,83,30,0.4)]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+                <img src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/FORJa%20png-8.png" alt="Logo de FORJA" class="h-40 md:h-56 mx-auto mb-6 drop-shadow-[0_5px_15px_rgba(217,83,30,0.4)]">
                 <h1 class="text-3xl md:text-4xl font-extrabold text-white">
                     Ministerio de Hombres <span class="accent-color">La Forja</span>
                 </h1>
@@ -105,6 +110,44 @@
                     "En cuanto a la pasada manera de vivir, despojaos del viejo hombre... y renovaos en el espíritu de vuestra mente, y vestíos del nuevo hombre, creado según Dios en la justicia y santidad de la verdad."
                 </p>
                 <p class="mt-2 text-md text-gray-300 font-semibold">Efesios 4:22-24</p>
+            </div>
+        </div>
+
+        <!-- ========== UPCOMING EVENT SECTION ========== -->
+        <div id="proximo-evento" class="bg-gray-800 text-white">
+            <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold md:text-4xl md:leading-tight">Convocatoria Especial: La Forja Avanzado</h2>
+                    <p class="mt-3 text-lg text-gray-300 max-w-3xl mx-auto">
+                        Una edición exclusiva para hombres que ya han vivido una experiencia de transformación en La Forja o en cualquier otro ministerio similar.
+                    </p>
+                    
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-6">
+                        <!-- Date Block -->
+                        <div class="bg-white/10 rounded-xl py-4 px-8 text-center highlight-glow">
+                            <div class="flex items-center justify-center gap-x-2">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span class="text-sm font-semibold uppercase tracking-wider text-gray-300">Fecha</span>
+                            </div>
+                            <p class="mt-2 text-2xl md:text-3xl font-bold accent-color">22 y 23 de Noviembre</p>
+                        </div>
+        
+                        <!-- Location Block -->
+                        <div class="bg-white/10 rounded-xl py-4 px-8 text-center ring-1 ring-white/20">
+                             <div class="flex items-center justify-center gap-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="text-sm font-semibold uppercase tracking-wider text-gray-300">Lugar</span>
+                            </div>
+                            <p class="mt-2 text-2xl md:text-3xl font-bold accent-color">Sierra Nevada de Santa Marta</p>
+                        </div>
+                    </div>
+                     <p class="mt-8 text-gray-400 text-sm">Un encuentro más íntimo y profundo. Cupos limitados. <br> Pronto daremos más detalles sobre la inversión.</p>
+                </div>
             </div>
         </div>
 
@@ -160,14 +203,19 @@
                     <p class="text-sm text-gray-500">Vicepresidente</p>
                 </div>
                 <div class="text-center">
-                    <img class="rounded-full mx-auto team-photo" src="https://placehold.co/128x128/e2e8f0/475569?text=?" alt="[Foto de miembro del equipo]">
-                    <h3 class="mt-4 text-lg font-semibold text-gray-800">Secretario</h3>
-                    <p class="text-sm text-gray-500">(Nombre por confirmar)</p>
+                    <img class="rounded-full mx-auto team-photo" src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/refs/heads/main/cesar.jpg" alt="[Foto de Cesar Berdugo, Secretario]" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/ffffff?text=Secretario';">
+                    <h3 class="mt-4 text-lg font-semibold text-gray-800">Cesar Berdugo</h3>
+                    <p class="text-sm text-gray-500">Secretario</p>
                 </div>
                 <div class="text-center">
-                    <img class="rounded-full mx-auto team-photo" src="https://placehold.co/128x128/e2e8f0/475569?text=?" alt="[Foto de miembro del equipo]">
-                    <h3 class="mt-4 text-lg font-semibold text-gray-800">Tesorero</h3>
-                    <p class="text-sm text-gray-500">(Nombre por confirmar)</p>
+                    <img class="rounded-full mx-auto team-photo" src="https://placehold.co/128x128/e2e8f0/475569?text=?" alt="[Foto de Elias George Angulo, Tesorero]">
+                    <h3 class="mt-4 text-lg font-semibold text-gray-800">Elias George Angulo</h3>
+                    <p class="text-sm text-gray-500">Tesorero</p>
+                </div>
+                <div class="text-center">
+                    <img class="rounded-full mx-auto team-photo" src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/refs/heads/main/edwin.jpg" alt="[Foto de Edwin Ortega Zabaleta, Revisor Fiscal]" onerror="this.onerror=null;this.src='https://placehold.co/128x128/cccccc/ffffff?text=Revisor+Fiscal';">
+                    <h3 class="mt-4 text-lg font-semibold text-gray-800">Edwin Ortega Zabaleta</h3>
+                    <p class="text-sm text-gray-500">Revisor Fiscal</p>
                 </div>
             </div>
         </div>
@@ -209,7 +257,7 @@
     </footer>
     
     <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
-    <a href="https://wa.me/573012971387?text=Hola!%20Quisiera%20más%20información%20sobre%20La%20Forja." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/573012971397?text=Hola!%20Quisiera%20más%20información%20sobre%20La%20Forja." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 16 16">
             <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.93 7.93 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.89 7.89 0 0 0 13.6 2.326zM7.994 14.521a6.57 6.57 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
         </svg>
@@ -237,18 +285,20 @@
             </div>
             <!-- Scrollable Modal Content -->
             <div class="overflow-y-auto px-6 sm:px-8 pb-8">
-                <form id="whatsapp-form">
+                <form id="inscription-form">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="sm:col-span-2"><label for="nombre" class="block text-sm font-medium mb-2">Nombre Completo</label><input type="text" name="nombre" id="nombre" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required></div>
-                        <div class="sm:col-span-2"><label for="cedula" class="block text-sm font-medium mb-2">Cédula de Ciudadanía</label><input type="text" name="cedula" id="cedula" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required></div>
-                        <div class="sm:col-span-2"><label for="email" class="block text-sm font-medium mb-2">Email</label><input type="email" name="email" id="email" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required></div>
-                        <div><label for="telefono" class="block text-sm font-medium mb-2">Teléfono / Celular</label><input type="tel" name="telefono" id="telefono" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required></div>
-                        <div><label for="fecha_nacimiento" class="block text-sm font-medium mb-2">Fecha de Nacimiento</label><input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required></div>
-                        <div class="sm:col-span-2"><label for="congregacion" class="block text-sm font-medium mb-2">Congregación (si aplica)</label><input type="text" name="congregacion" id="congregacion" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm"></div>
+                        <div class="sm:col-span-2"><label for="NombreCompleto" class="block text-sm font-medium mb-2">Nombre Completo <span class="text-red-500">*</span></label><input type="text" name="NombreCompleto" id="NombreCompleto" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required></div>
+                        <div class="sm:col-span-2"><label for="Cedula" class="block text-sm font-medium mb-2">Cédula de Ciudadanía <span class="text-red-500">*</span></label><input type="text" name="Cedula" id="Cedula" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required></div>
+                        <div class="sm:col-span-2"><label for="Email" class="block text-sm font-medium mb-2">Email <span class="text-red-500">*</span></label><input type="email" name="Email" id="Email" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required></div>
+                        <div class="sm:col-span-2"><label for="Telefono" class="block text-sm font-medium mb-2">Teléfono / Celular <span class="text-red-500">*</span></label><input type="tel" name="Telefono" id="Telefono" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required></div>
+                        
+                        <div><label for="FechaNacimiento" class="block text-sm font-medium mb-2">Fecha de Nacimiento (Opcional)</label><input type="date" name="FechaNacimiento" id="FechaNacimiento" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm"></div>
+                        <div class="sm:col-span-2"><label for="Congregacion" class="block text-sm font-medium mb-2">Congregación (si aplica)</label><input type="text" name="Congregacion" id="Congregacion" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm"></div>
                         
                         <div class="sm:col-span-2">
-                            <label for="rol" class="block text-sm font-medium mb-2">Rol en tu congregación</label>
-                            <select id="rol" name="rol" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm" required>
+                            <label for="Rol" class="block text-sm font-medium mb-2">Rol en tu congregación (Opcional)</label>
+                            <select id="Rol" name="Rol" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm">
+                                <option value="" selected>Selecciona una opción...</option>
                                 <option value="Congregante">Congregante</option>
                                 <option value="Líder">Líder</option>
                                 <option value="Pastor">Pastor</option>
@@ -259,13 +309,14 @@
                         <fieldset class="sm:col-span-2">
                             <legend class="block text-sm font-medium mb-2">Tipo de Inscripción</legend>
                             <div class="flex items-center gap-x-6">
-                                <div class="flex items-center"><input id="tipo_participante" name="tipo_inscripcion" type="radio" value="Participante" class="h-4 w-4" checked><label for="tipo_participante" class="ml-2 block text-sm">Participante</label></div>
-                                <div class="flex items-center"><input id="tipo_servidor" name="tipo_inscripcion" type="radio" value="Servidor" class="h-4 w-4"><label for="tipo_servidor" class="ml-2 block text-sm">Servidor</label></div>
+                                <div class="flex items-center"><input id="tipo_participante" name="TipoInscripcion" type="radio" value="Participante" class="h-4 w-4" checked><label for="tipo_participante" class="ml-2 block text-sm">Participante</label></div>
+                                <div class="flex items-center"><input id="tipo_servidor" name="TipoInscripcion" type="radio" value="Servidor" class="h-4 w-4"><label for="tipo_servidor" class="ml-2 block text-sm">Servidor</label></div>
                             </div>
                         </fieldset>
 
                     </div>
-                    <div class="mt-8 text-center"><button type="submit" class="w-full sm:w-auto inline-flex justify-center items-center gap-x-3 text-center bg-green-500 hover:bg-green-600 border border-transparent text-white text-lg font-medium rounded-md py-3 px-8">Enviar por WhatsApp</button></div>
+                    <div id="form-feedback" class="mt-4 text-center text-sm"></div>
+                    <div class="mt-6 text-center"><button type="submit" id="submit-btn" class="w-full sm:w-auto inline-flex justify-center items-center gap-x-3 text-center bg-green-500 hover:bg-green-600 border border-transparent text-white text-lg font-medium rounded-md py-3 px-8">Enviar Inscripción</button></div>
                 </form>
             </div>
         </div>
@@ -357,32 +408,80 @@
             lightboxOverlay.addEventListener('click', closeLightbox);
 
 
-            // --- WhatsApp Form Logic ---
-            const form = document.getElementById('whatsapp-form');
+            // --- Google Sheets & WhatsApp Form Logic ---
+            const form = document.getElementById('inscription-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const formFeedback = document.getElementById('form-feedback');
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzU8VlmaG3N0NRrS9dYyOJF1q0UHtpz5gNxq_VXG1XCrlBHBMpYtzSqwAnhZqAC3OkB/exec'; // <-- URL Actualizada
+
             form.addEventListener('submit', function(event) {
                 event.preventDefault();
-                // Obtener valores
-                const nombre = document.getElementById('nombre').value;
-                const cedula = document.getElementById('cedula').value;
-                const email = document.getElementById('email').value;
-                const telefono = document.getElementById('telefono').value;
-                const fechaNacimiento = document.getElementById('fecha_nacimiento').value;
-                const congregacion = document.getElementById('congregacion').value || 'No especificada';
-                const rol = document.getElementById('rol').value;
-                const tipoInscripcion = document.querySelector('input[name="tipo_inscripcion"]:checked').value;
-
-                const whatsappNumber = '573012971387';
                 
-                const message = `¡Hola! Quiero inscribirme en LA FORJA.\n\n*--- Datos del Forjador ---*\n*Nombre:* ${nombre}\n*Cédula:* ${cedula}\n*Email:* ${email}\n*Teléfono:* ${telefono}\n*Fecha de Nacimiento:* ${fechaNacimiento}\n*Congregación:* ${congregacion}\n*Rol:* ${rol}\n*Tipo de Inscripción:* ${tipoInscripcion}`;
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
+                formFeedback.textContent = '';
+                
+                const formData = new FormData(form);
+                
+                // 1. Enviar datos a Google Sheets
+                fetch(SCRIPT_URL, { method: 'POST', body: formData })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.result === 'success') {
+                            formFeedback.textContent = '¡Datos guardados! Redirigiendo a WhatsApp...';
+                            formFeedback.classList.add('text-green-600');
+                            
+                            // 2. Si es exitoso, construir y abrir WhatsApp
+                            openWhatsAppLink(formData);
+                            
+                            setTimeout(() => {
+                                closeFormModal();
+                                form.reset();
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = 'Enviar Inscripción';
+                                formFeedback.textContent = '';
+                                formFeedback.classList.remove('text-green-600');
+                            }, 2000);
+
+                        } else {
+                            // Si hay un error en el script de Google
+                            throw new Error(data.error || 'Error desconocido del script.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        formFeedback.textContent = 'Error al guardar los datos. Por favor, inténtalo de nuevo.';
+                        formFeedback.classList.add('text-red-600');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Enviar Inscripción';
+                    });
+            });
+
+            function openWhatsAppLink(formData) {
+                const nombre = formData.get('NombreCompleto');
+                const cedula = formData.get('Cedula');
+                const email = formData.get('Email');
+                const telefono = formData.get('Telefono');
+                const fechaNacimiento = formData.get('FechaNacimiento') || 'No especificada';
+                const congregacion = formData.get('Congregacion') || 'No especificada';
+                const rol = formData.get('Rol') || 'No especificado';
+                const tipoInscripcion = formData.get('TipoInscripcion');
+                
+                const whatsappNumber = '573012971397';
+                
+                let message = `¡Hola! Quiero inscribirme en LA FORJA.\n\n*--- Datos del Forjador ---*\n*Nombre:* ${nombre}\n*Cédula:* ${cedula}\n*Email:* ${email}\n*Teléfono:* ${telefono}`;
+
+                if (fechaNacimiento !== 'No especificada') message += `\n*Fecha de Nacimiento:* ${fechaNacimiento}`;
+                if (congregacion !== 'No especificada') message += `\n*Congregación:* ${congregacion}`;
+                if (rol !== 'No especificado' && rol !== '') message += `\n*Rol:* ${rol}`;
+                
+                message += `\n*Tipo de Inscripción:* ${tipoInscripcion}`;
                 
                 const encodedMessage = encodeURIComponent(message);
                 const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
                 
                 window.open(whatsappURL, '_blank');
-                
-                closeFormModal();
-                form.reset(); // Limpiar el formulario
-            });
+            }
         });
     </script>
 
