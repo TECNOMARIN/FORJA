@@ -61,6 +61,9 @@
             box-shadow: 0 0 15px 4px rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -103,13 +106,18 @@
         <div id="inicio" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=1770'); background-size: cover; background-position: center;">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
                 <img src="https://raw.githubusercontent.com/TECNOMARIN/FORJA/main/FORJa%20png-8.png" alt="Logo de FORJA" class="h-40 md:h-56 mx-auto mb-6 drop-shadow-[0_5px_15px_rgba(217,83,30,0.4)]">
-                <h1 class="text-3xl md:text-4xl font-extrabold text-white">
+                <h1 class="text-3xl md:text-4xl font-extrabold text-white text-shadow-strong">
                     Ministerio de Hombres <span class="accent-color">La Forja</span>
                 </h1>
-                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-200 italic">
-                    "En cuanto a la pasada manera de vivir, despojaos del viejo hombre... y renovaos en el espíritu de vuestra mente, y vestíos del nuevo hombre, creado según Dios en la justicia y santidad de la verdad."
-                </p>
-                <p class="mt-2 text-md text-gray-300 font-semibold">Efesios 4:22-24</p>
+                
+                <!-- Verse container -->
+                <div class="mt-6 bg-black/40 backdrop-blur-sm rounded-lg p-4 inline-block max-w-3xl">
+                    <p class="text-lg text-gray-200 italic">
+                        "En cuanto a la pasada manera de vivir, despojaos del viejo hombre... y renovaos en el espíritu de vuestra mente, y vestíos del nuevo hombre, creado según Dios en la justicia y santidad de la verdad."
+                    </p>
+                    <p class="mt-2 text-md text-gray-300 font-semibold">Efesios 4:22-24</p>
+                </div>
+
             </div>
         </div>
 
@@ -600,6 +608,8 @@
 
 </body>
 </html>
+
+
 
 
 
