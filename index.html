@@ -122,31 +122,40 @@
                         Una edición exclusiva para hombres que ya han vivido una experiencia de transformación en La Forja o en cualquier otro ministerio similar.
                     </p>
                     
-                    <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <div class="mt-8 inline-flex flex-col items-center gap-4">
                         <!-- Date Block -->
-                        <div class="bg-white/10 rounded-xl py-4 px-8 text-center highlight-glow">
+                        <div id="date-block-btn" class="bg-white/10 rounded-xl py-4 px-8 text-center highlight-glow cursor-pointer transition-transform hover:scale-105">
                             <div class="flex items-center justify-center gap-x-2">
                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
                                 <span class="text-sm font-semibold uppercase tracking-wider text-gray-300">Fecha</span>
                             </div>
-                            <p class="mt-2 text-2xl md:text-3xl font-bold accent-color">22 y 23 de Noviembre</p>
+                            <p class="mt-2 text-2xl md:text-3xl font-bold accent-color">29 y 30 de Noviembre</p>
                         </div>
         
-                        <!-- Location Block -->
-                        <div class="bg-white/10 rounded-xl py-4 px-8 text-center ring-1 ring-white/20">
+                        <!-- Location Block (Smaller and below) -->
+                        <div class="bg-white/10 rounded-xl py-2 px-6 text-center ring-1 ring-white/20">
                              <div class="flex items-center justify-center gap-x-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                   <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                   <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>
-                                <span class="text-sm font-semibold uppercase tracking-wider text-gray-300">Lugar</span>
+                                <span class="text-xs font-semibold uppercase tracking-wider text-gray-300">Lugar</span>
                             </div>
-                            <p class="mt-2 text-2xl md:text-3xl font-bold accent-color">Sierra Nevada de Santa Marta</p>
+                            <p class="mt-1 text-xl font-bold accent-color">Sierra Nevada de Santa Marta</p>
                         </div>
                     </div>
                      <p class="mt-8 text-gray-400 text-sm">Un encuentro más íntimo y profundo. Cupos limitados. <br> Pronto daremos más detalles sobre la inversión.</p>
+                     <!-- Botón "¿Qué necesitas llevar?" -->
+                     <div class="mt-6">
+                        <button id="open-needs-modal-btn" type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-gray-400 text-gray-300 hover:text-white hover:border-white disabled:opacity-50 disabled:pointer-events-none px-4 py-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                            </svg>
+                            ¿Qué necesitas llevar?
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -331,6 +340,113 @@
         </div>
     </div>
 
+    <!-- ========== NEEDS MODAL ========== -->
+    <div id="needs-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div id="needs-modal-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity duration-300"></div>
+        <div class="relative bg-white rounded-xl shadow-lg w-full max-w-lg mx-auto flex flex-col max-h-[90vh]">
+            <!-- Modal Header -->
+            <div class="p-6 sm:p-8 pb-4 flex-shrink-0">
+                <button id="close-needs-modal-btn" type="button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 z-10">
+                    <span class="sr-only">Cerrar</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                <h2 class="text-2xl font-bold text-gray-800 text-center">Instructivo para Forjadores</h2>
+            </div>
+            <!-- Scrollable Modal Content -->
+            <div class="overflow-y-auto px-6 sm:px-8 pb-8 text-gray-700 space-y-6">
+                 <p class="text-center italic text-sm">Una guía para que tu experiencia en FORJA sea la mejor. Por favor, toma en cuenta estas recomendaciones.</p>
+
+                <div>
+                    <h3 class="font-bold accent-color mb-2">¿CÓMO DEBE SER MI MORRAL?</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Capacidad mínima de 45 litros.</li>
+                        <li>Peso máximo de 30 libras (incluye todo).</li>
+                        <li>Cubierta impermeable (puede ser una bolsa para basura).</li>
+                        <li>Tu morral es personal, de uso individual.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold accent-color mb-2 flex items-center gap-2">¿QUÉ DOCUMENTOS DEBO LLEVAR? <span class="text-xs font-semibold bg-red-100 text-red-700 px-2 py-0.5 rounded-full">OBLIGATORIO</span></h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Cédula de ciudadanía, tarjeta de identidad o pasaporte.</li>
+                        <li>Copia de la forma de responsabilidad (debes traerla firmada).</li>
+                        <li>Datos de contacto en caso de emergencia.</li>
+                        <li>Carnet de vacunación COVID y/o prueba negativa PCR no mayor a 72 horas.</li>
+                    </ul>
+                     <p class="text-xs mt-2 text-gray-500">La forma de responsabilidad se te enviará por WhatsApp una vez que completes tu inscripción.</p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold accent-color mb-2">¿QUÉ PRENDAS DEBO EMPACAR?</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Pantalones para senderismo (por favor, no traigas lona o jeans).</li>
+                        <li>Traje o short para baño.</li>
+                        <li>Camiseta de manga larga y corta.</li>
+                        <li>Sombrero o gorra.</li>
+                        <li>Chaqueta impermeable.</li>
+                        <li>Gafas de sol.</li>
+                        <li>Pañuelo grande.</li>
+                        <li>Medias deportivas para caminata (2 o 3 pares).</li>
+                    </ul>
+                </div>
+                
+                 <div>
+                    <h3 class="font-bold accent-color mb-2">¿QUÉ CALZADO DEBO LLEVAR?</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Tenis para senderismo.</li>
+                        <li>Botas para senderismo.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold accent-color mb-2">¿QUÉ DEBO LLEVAR PARA DORMIR?</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Tienda de acampar individual (máximo para dos personas).</li>
+                        <li>Bolsa para dormir (sleeping bag).</li>
+                        <li>Cubierta impermeable para dormir (puede ser bolsa de basura).</li>
+                        <li>Aislante térmico.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold accent-color mb-2">¿QUÉ DEBO LLEVAR PARA COMER?</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Cuchara para comer.</li>
+                        <li>Termo de agua (dos de 32 oz o equipo de hidratación).</li>
+                        <li>Dos litros de agua para la primera noche.</li>
+                        <li class="font-semibold">NO traer ningún alimento (a menos que sea por condición médica).</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold accent-color mb-2">ARTÍCULOS DE HIGIENE PERSONAL</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Toalla.</li>
+                        <li>Papel higiénico.</li>
+                        <li>Parches para ampollas (Blister Patch).</li>
+                        <li>Aspirinas, Vaselina y talco.</li>
+                        <li>Repelente de mosquitos.</li>
+                        <li>Protector para labios y bloqueador solar.</li>
+                        <li class="font-semibold">Recuerda que todos los productos deben ser amigables con el medio ambiente.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold accent-color mb-2">OTROS ARTÍCULOS ÚTILES</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Linterna (de preferencia de cabeza) y baterías.</li>
+                        <li class="font-bold">Biblia OBLIGATORIA (en bolsa impermeable).</li>
+                        <li>Bastón para caminata (opcional).</li>
+                        <li>Plástico de 2x2 y 5m de cuerda (para refugio de emergencia).</li>
+                        <li>5 Bolsas ziplock.</li>
+                        <li>Olla pequeña (para hacer café).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- ========== JAVASCRIPT ========== -->
     <script>
@@ -348,9 +464,9 @@
                 iconOpen.classList.toggle('hidden');
                 iconClose.classList.toggle('hidden');
             };
-
+            
             menuButton.addEventListener('click', toggleMenu);
-
+            // Close menu when a link is clicked on mobile
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     if (!menu.classList.contains('hidden')) {
@@ -364,6 +480,7 @@
             const formModal = document.getElementById('form-modal');
             const floatingBtn = document.getElementById('floating-inscribete-btn');
             const navInscribeteBtn = document.getElementById('nav-inscribete-btn');
+            const dateBlockBtn = document.getElementById('date-block-btn'); // Botón de fecha
             const closeFormBtn = document.getElementById('close-modal-btn');
             const formOverlay = document.getElementById('modal-overlay');
 
@@ -373,115 +490,111 @@
             };
             const closeFormModal = () => {
                 formModal.classList.add('hidden');
-                document.body.style.overflow = ''; // Restaura el scroll del fondo
+                document.body.style.overflow = ''; // Restaura el scroll
             };
 
             floatingBtn.addEventListener('click', openFormModal);
             navInscribeteBtn.addEventListener('click', (e) => { e.preventDefault(); openFormModal(); });
+            dateBlockBtn.addEventListener('click', openFormModal); 
             closeFormBtn.addEventListener('click', closeFormModal);
             formOverlay.addEventListener('click', closeFormModal);
+
+
+            // --- Needs Modal Logic ---
+            const needsModal = document.getElementById('needs-modal');
+            const openNeedsBtn = document.getElementById('open-needs-modal-btn');
+            const closeNeedsBtn = document.getElementById('close-needs-modal-btn');
+            const needsOverlay = document.getElementById('needs-modal-overlay');
+
+            const openNeedsModal = () => {
+                needsModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            };
+            const closeNeedsModal = () => {
+                needsModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            };
+
+            openNeedsBtn.addEventListener('click', openNeedsModal);
+            closeNeedsBtn.addEventListener('click', closeNeedsModal);
+            needsOverlay.addEventListener('click', closeNeedsModal);
 
 
             // --- Gallery Lightbox Logic ---
             const lightboxModal = document.getElementById('lightbox-modal');
             const lightboxImage = document.getElementById('lightbox-image');
-            const lightboxOverlay = document.getElementById('lightbox-overlay');
             const closeLightboxBtn = document.getElementById('close-lightbox-btn');
+            const lightboxOverlay = document.getElementById('lightbox-overlay');
             const galleryImages = document.querySelectorAll('.gallery-img');
 
             const openLightbox = (src) => {
                 lightboxImage.src = src;
                 lightboxModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
             };
 
-            const closeLightbox = () => lightboxModal.classList.add('hidden');
+            const closeLightbox = () => {
+                lightboxModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            };
 
             galleryImages.forEach(img => {
-                img.addEventListener('click', () => {
-                    if(!img.src.includes('placehold.co')) {
-                       openLightbox(img.src);
-                    }
-                });
+                img.addEventListener('click', () => openLightbox(img.src));
             });
-            
             closeLightboxBtn.addEventListener('click', closeLightbox);
             lightboxOverlay.addEventListener('click', closeLightbox);
 
 
-            // --- Google Sheets & WhatsApp Form Logic ---
+            // --- Inscription Form Logic (Google Sheets & WhatsApp) ---
             const form = document.getElementById('inscription-form');
             const submitBtn = document.getElementById('submit-btn');
             const formFeedback = document.getElementById('form-feedback');
-            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzU8VlmaG3N0NRrS9dYyOJF1q0UHtpz5gNxq_VXG1XCrlBHBMpYtzSqwAnhZqAC3OkB/exec'; // <-- URL Actualizada
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzU8VlmaG3N0NRrS9dYyOJF1q0UHtpz5gNxq_VXG1XCrlBHBMpYtzSqwAnhZqAC3OkB/exec';
 
-            form.addEventListener('submit', function(event) {
-                event.preventDefault();
-                
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Enviando...';
-                formFeedback.textContent = '';
-                
+                formFeedback.textContent = 'Procesando tu inscripción, por favor espera...';
+                formFeedback.className = 'mt-4 text-center text-sm text-blue-600';
+
                 const formData = new FormData(form);
                 
-                // 1. Enviar datos a Google Sheets
                 fetch(SCRIPT_URL, { method: 'POST', body: formData })
                     .then(response => response.json())
                     .then(data => {
                         if (data.result === 'success') {
-                            formFeedback.textContent = '¡Datos guardados! Redirigiendo a WhatsApp...';
-                            formFeedback.classList.add('text-green-600');
+                            formFeedback.textContent = '¡Inscripción registrada! Redirigiendo a WhatsApp...';
+                            formFeedback.className = 'mt-4 text-center text-sm text-green-600';
                             
-                            // 2. Si es exitoso, construir y abrir WhatsApp
-                            openWhatsAppLink(formData);
+                            // WhatsApp Logic
+                            const nombre = document.getElementById('NombreCompleto').value;
+                            const whatsappNumber = '573012971397';
+                            const message = `¡Hola! Acabo de inscribirme en LA FORJA AVANZADO.\n\nMi nombre es: *${nombre}*.\n\n¡Quedo atento a las próximas indicaciones!`;
+                            const encodedMessage = encodeURIComponent(message);
+                            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
                             
                             setTimeout(() => {
-                                closeFormModal();
+                                window.open(whatsappURL, '_blank');
                                 form.reset();
-                                submitBtn.disabled = false;
-                                submitBtn.textContent = 'Enviar Inscripción';
-                                formFeedback.textContent = '';
-                                formFeedback.classList.remove('text-green-600');
-                            }, 2000);
+                                closeFormModal();
+                            }, 1500);
 
                         } else {
-                            // Si hay un error en el script de Google
-                            throw new Error(data.error || 'Error desconocido del script.');
+                            throw new Error(data.error || 'Ocurrió un error desconocido.');
                         }
                     })
                     .catch(error => {
                         console.error('Error!', error.message);
-                        formFeedback.textContent = 'Error al guardar los datos. Por favor, inténtalo de nuevo.';
-                        formFeedback.classList.add('text-red-600');
+                        formFeedback.textContent = `Error al registrar. Por favor, intenta de nuevo. (${error.message})`;
+                        formFeedback.className = 'mt-4 text-center text-sm text-red-600';
+                    })
+                    .finally(() => {
                         submitBtn.disabled = false;
                         submitBtn.textContent = 'Enviar Inscripción';
                     });
             });
 
-            function openWhatsAppLink(formData) {
-                const nombre = formData.get('NombreCompleto');
-                const cedula = formData.get('Cedula');
-                const email = formData.get('Email');
-                const telefono = formData.get('Telefono');
-                const fechaNacimiento = formData.get('FechaNacimiento') || 'No especificada';
-                const congregacion = formData.get('Congregacion') || 'No especificada';
-                const rol = formData.get('Rol') || 'No especificado';
-                const tipoInscripcion = formData.get('TipoInscripcion');
-                
-                const whatsappNumber = '573012971397';
-                
-                let message = `¡Hola! Quiero inscribirme en LA FORJA.\n\n*--- Datos del Forjador ---*\n*Nombre:* ${nombre}\n*Cédula:* ${cedula}\n*Email:* ${email}\n*Teléfono:* ${telefono}`;
-
-                if (fechaNacimiento !== 'No especificada') message += `\n*Fecha de Nacimiento:* ${fechaNacimiento}`;
-                if (congregacion !== 'No especificada') message += `\n*Congregación:* ${congregacion}`;
-                if (rol !== 'No especificado' && rol !== '') message += `\n*Rol:* ${rol}`;
-                
-                message += `\n*Tipo de Inscripción:* ${tipoInscripcion}`;
-                
-                const encodedMessage = encodeURIComponent(message);
-                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-                
-                window.open(whatsappURL, '_blank');
-            }
         });
     </script>
 
